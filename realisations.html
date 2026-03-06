@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Réalisations | Aïcha Yahyaoui</title>
-
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +14,14 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">AY<span>.</span></div>
-        <ul class="nav-links">
+
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Accueil</a></li>
             <li><a href="realisations.html" class="active">Réalisations</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -27,42 +32,35 @@
     <section class="hero hero-small">
         <div class="container">
             <h1>Mes Réalisations</h1>
-            <p>
-                Photographie, Création digitale et Projets web.
-            </p>
+            <p>Photographie, Création digitale et Projets web.</p>
         </div>
     </section>
-
 
     <!-- PHOTOGRAPHIE -->
     <section class="photo-section">
         <div class="container">
-            <br>
             <h2>Photographie</h2>
-            <br>
+
             <div class="preview-grid">
 
                 <div class="photo-card">
-                    <img src="photo1.JPG">
+                    <img src="photo1.JPG" alt="Événement MMA">
                     <div class="photo-overlay">
                         <h3>Événement MMA</h3>
-
                     </div>
                 </div>
 
                 <div class="photo-card">
-                    <img src="photo3.JPG">
+                    <img src="photo3.JPG" alt="Concert">
                     <div class="photo-overlay">
                         <h3>Concert</h3>
-
                     </div>
                 </div>
 
                 <div class="photo-card">
-                    <img src="photo2.JPEG">
+                    <img src="photo2.JPEG" alt="Événement caritatif">
                     <div class="photo-overlay">
                         <h3>Événement caritatif</h3>
-
                     </div>
                 </div>
 
@@ -78,66 +76,58 @@
     <!-- FILTRE SNAP -->
     <section class="snap-section">
         <div class="container">
-            <br>
             <h2>Création de Filtre Snapchat</h2>
-            <br>
+
             <div class="snap-card">
 
-                <img src="LA BARAK'ATIRA FILTRE.png" class="filtre-img">
+                <img src="LA BARAK'ATIRA FILTRE.png" class="filtre-img" alt="Filtre La Barakatira">
 
                 <div class="snap-text">
-
                     <h3>La Barakatira</h3>
                     <br>
                     <p>
-                        Création d’un filtre Snapchat pour le commerce
+                        Création d'un filtre Snapchat pour le commerce
                         La Barakatira à Orléans.
                     </p>
-
+                    <br>
                     <p>
-                        Conception graphique avec Canva et outils d’IA,
+                        Conception graphique avec Canva et outils d'IA,
                         puis intégration et publication via Lens Studio.
                     </p>
 
                     <div class="snap-qr-container">
                         <p>Scanner avec l'application Snapchat</p>
-                        <br>
-                        <img src="snapcode.png" class="snap-qr">
-
+                        <img src="snapcode.png" class="snap-qr" alt="QR code Snapchat">
                     </div>
-
                 </div>
 
             </div>
-
         </div>
     </section>
 
     <!-- SITE WEB -->
     <section class="web-section">
         <div class="container">
-            <br>
             <h2>Site Web</h2>
-            <br>
+
             <div class="project-card">
                 <h3>Algo Lego</h3>
-<br>
+                <br>
                 <p>
-                    Dans le cadre d’un projet universitaire, j’ai conçu un site web vitrine pour une enseigne fictive
-                    LEGO. Le site comprend une page d’accueil et des pages dédiées à plusieurs villes. Il a
-                    été réalisé en HTML et CSS ,ce projet m'a permis de mieux comprendre la structure d'un site web,
-                    l'organisation des pages et les bases de l’expérience utilisateur.
+                    Dans le cadre d'un projet universitaire, j'ai conçu un site web vitrine pour une enseigne fictive
+                    LEGO. Le site comprend une page d'accueil et des pages dédiées à plusieurs villes. Il a
+                    été réalisé en HTML et CSS — ce projet m'a permis de mieux comprendre la structure d'un site web,
+                    l'organisation des pages et les bases de l'expérience utilisateur.
                 </p>
 
                 <div class="galerie-projet">
-        <img src="ACCEUIL LEGO.JPG" alt="Page d'accueil Algo Lego">
-        <img src="ACCZUIL ORLEANS.JPG" alt="Page boutique Algo Lego">
-        <img src="AVIE ORELANS.JPG" alt="Page avis clients Algo Lego">
-        <img src="AVIE REPONSE.JPG" alt="Page contact Algo Lego">
-    </div>
+                    <img src="ACCEUIL LEGO.JPG" alt="Page d'accueil Algo Lego">
+                    <img src="ACCZUIL ORLEANS.JPG" alt="Page boutique Algo Lego">
+                    <img src="AVIE ORELANS.JPG" alt="Page avis clients Algo Lego">
+                    <img src="AVIE REPONSE.JPG" alt="Page contact Algo Lego">
+                </div>
 
             </div>
-
         </div>
     </section>
 
@@ -146,6 +136,16 @@
         © 2026 Aïcha Yahyaoui — BUT MMI
     </footer>
 
-</body>
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+        });
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
+    </script>
 
+</body>
 </html>
