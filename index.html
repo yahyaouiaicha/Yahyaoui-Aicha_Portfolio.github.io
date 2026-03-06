@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aïcha Yahyaoui | Portfolio</title>
-
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -16,7 +15,14 @@
     <!-- NAVBAR -->
     <nav class="navbar">
         <div class="logo">AY<span>.</span></div>
-        <ul class="nav-links">
+
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html" class="active">Accueil</a></li>
             <li><a href="realisations.html">Réalisations</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -29,14 +35,12 @@
 
             <div class="hero-content">
                 <h1>Bonjour, je suis <span>Aïcha</span></h1>
-
                 <p>
-                    Étudiante en BUT Métiers du Multimédia et de l’Internet,
+                    Étudiante en BUT Métiers du Multimédia et de l'Internet,
                     passionnée par la création digitale, le développement web
                     et la photographie événementielle.
                 </p>
-
-                <a href="CV- YAHYAOUI AICHA.pdf" download class="project-btn">
+                <a href="CV- YAHYAOUI AICHA.pdf" download class="cv-btn">
                     Télécharger mon CV
                 </a>
             </div>
@@ -47,21 +51,23 @@
 
         </div>
     </section>
+
     <br>
-    <h3>Ambition ● Créativité ● Photographie ● Développement Web</h3>
+    <h3 style="text-align:center; color:var(--primary); opacity:0.7; font-size:0.95rem; letter-spacing:0.04em;">
+        Ambition ● Créativité ● Photographie ● Développement Web
+    </h3>
+
     <!-- CARTES -->
     <section class="pathway">
         <div class="container">
-
             <div class="path-card">
 
                 <div class="path-item">
                     <h3>Ambition</h3>
                     <p>
-                        Je recherche une alternance en communication
-                        événementielle dès septembre 2026
-                        afin de développer mes compétences et participer
-                        à l'organisation et la promotion d'événements.
+                        Je recherche une alternance en communication événementielle à partir de septembre 2026 pour une
+                        durée de deux ans, afin de développer mes compétences et de participer à l’organisation et à la
+                        promotion d’événements.
                     </p>
                 </div>
 
@@ -69,7 +75,7 @@
                     <h3>Créativité</h3>
                     <p>
                         Conception de supports visuels et contenus
-                        digitaux créatifs, adaptés à l'identité besoins des entreprises
+                        digitaux créatifs, adaptés à l'identité et aux besoins des entreprises
                         et de leurs événements.
                     </p>
                 </div>
@@ -79,7 +85,7 @@
                     <p>
                         Photographie événementielle : Sportive, culturelle,
                         réunions associatives et événements caritatifs,
-                        avec réalisation de portraits
+                        avec réalisation de portraits.
                     </p>
                 </div>
 
@@ -92,7 +98,6 @@
                 </div>
 
             </div>
-
         </div>
     </section>
 
@@ -100,6 +105,13 @@
     <footer>
         © 2026 Aïcha Yahyaoui — BUT MMI
     </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+        burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+        navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+    </script>
 
 </body>
 
