@@ -41,21 +41,27 @@
                 <h1>Bonjour, je suis <span>Aïcha</span></h1>
 
                 <p>
-                    Étudiante en BUT Métiers du Multimédia et de l’Internet, 
-                    je recherche un stage en communication à partir du 12 avril 2027.
-                    Je souhaite mettre ma créativité et mes compétences en création 
-                    de contenus au service de projets de communication.
+                    Étudiante en deuxième année de BUT Métiers du Multimédia et de l’Internet,
+                    je recherche un stage en <strong>communication</strong> à partir du 12 avril 2027.
+                    Je souhaite mettre ma créativité et mes compétences au service de projets
+                    de communication concrets.
                 </p>
 
-                <a href="CV- YAHYAOUI AICHA.pdf" download class="cv-btn">
-                    Télécharger mon CV
-                </a>
+                <div class="hero-buttons">
 
-                <a href="realisations.html" class="real-btn">
-                    Voir mes réalisations
-                </a>
+                    <a href="CV- YAHYAOUI AICHA.pdf" download class="cv-btn">
+                        Télécharger mon CV
+                    </a>
 
-             
+                    <a href="realisations.html" class="real-btn">
+                        Voir mes réalisations
+                    </a>
+
+                </div>
+
+                <h3 class="hero-subtitle">
+                    Communication ● Création de contenus ● Communication digitale ● Communication événementielle
+                </h3>
 
             </div>
 
@@ -68,7 +74,22 @@
     </section>
 
 
-    <br>
+    <!-- DOMAINE -->
+    <section class="communication-intro">
+
+        <div class="container">
+
+            <h2>Communication</h2>
+
+            <p>
+                Je m’intéresse particulièrement à la création de contenus,
+                à la communication digitale et à la valorisation de projets
+                à travers des supports visuels et numériques.
+            </p>
+
+        </div>
+
+    </section>
 
 
     <!-- CARTES -->
@@ -80,45 +101,54 @@
 
                 <!-- COMMUNICATION -->
                 <div class="path-item">
+
                     <h3>Communication</h3>
 
                     <p>
                         Création de contenus et de supports de communication
                         adaptés à l’identité, aux objectifs et aux publics.
                     </p>
+
                 </div>
 
 
                 <!-- CRÉATION DE CONTENUS -->
                 <div class="path-item">
+
                     <h3>Création de contenus</h3>
 
                     <p>
                         Conception de contenus visuels et digitaux pour les
                         réseaux sociaux et différents projets de communication.
                     </p>
+
                 </div>
 
 
                 <!-- PHOTOGRAPHIE -->
                 <div class="path-item">
+
                     <h3>Photographie</h3>
 
                     <p>
                         Photographie événementielle, sportive et culturelle,
-                        ainsi que réalisation de portraits pour valoriser les projets.
+                        ainsi que réalisation de portraits pour valoriser
+                        les projets et événements.
                     </p>
+
                 </div>
 
 
-                <!-- DÉVELOPPEMENT WEB -->
+                <!-- WEB -->
                 <div class="path-item">
-                    <h3>Développement Web</h3>
+
+                    <h3>Compétences Web</h3>
 
                     <p>
-                        Création de sites vitrines en HTML et CSS, avec des bases
-                        en responsive design et en mise en page web.
+                        Création de sites vitrines en HTML et CSS,
+                        avec des bases en responsive design et en mise en page web.
                     </p>
+
                 </div>
 
             </div>
@@ -144,11 +174,11 @@
             navLinks.classList.toggle('open');
         });
 
-        navLinks.querySelectorAll('a').forEach(a => 
+        navLinks.querySelectorAll('a').forEach(a => {
             a.addEventListener('click', () => {
                 navLinks.classList.remove('open');
-            })
-        );
+            });
+        });
 
     </script>
 
